@@ -311,6 +311,8 @@ dd_dict["Joel"]["City"] = "Seattle"     # {"Joel" : {"City": Seattle"}}
 dd_pair = defaultdict(lambda: [0, 0])
 dd_pair[2][1] = 1                       # now dd_pair contains {2: [0, 1]}
 
+
+
 from collections import Counter
 c = Counter([0, 1, 2, 0])          # c is (basically) {0: 2, 1: 1, 2: 1}
 
@@ -320,6 +322,9 @@ word_counts = Counter(document)
 # print the 10 most common words and their counts
 for word, count in word_counts.most_common(10):
     print(word, count)
+	
+	
+	
 
 primes_below_10 = {2, 3, 5, 7}
 
@@ -352,6 +357,8 @@ assert num_items == 6
 assert item_set == {1, 2, 3}
 assert num_distinct_items == 3
 assert distinct_item_list == [1, 2, 3]
+
+
 
 if 1 > 2:
     message = "if only 1 were greater than two..."
@@ -411,6 +418,9 @@ any([True, 1, {}])    # True, True is truthy
 all([])               # True, no falsy elements in the list
 any([])               # False, no truthy elements in the list
 
+
+
+
 x = [4, 1, 2, 3]
 y = sorted(x)     # y is [1, 2, 3, 4], x is unchanged
 x.sort()          # now x is [1, 2, 3, 4]
@@ -422,6 +432,7 @@ x = sorted([-4, 1, -2, 3], key=abs, reverse=True)  # is [-4, 3, -2, 1]
 wc = sorted(word_counts.items(),
             key=lambda word_and_count: word_and_count[1],
             reverse=True)
+			
 
 even_numbers = [x for x in range(5) if x % 2 == 0]  # [0, 2, 4]
 squares      = [x * x for x in range(5)]            # [0, 1, 4, 9, 16]
@@ -459,6 +470,8 @@ increasing_pairs = [(x, y)                       # only pairs with x < y,
 assert len(increasing_pairs) == 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1
 assert all(x < y for x, y in increasing_pairs)
 
+
+
 assert 1 + 1 == 2
 assert 1 + 1 == 2, "1 + 1 should equal 2 but didn't"
 
@@ -472,6 +485,8 @@ def smallest_item(xs):
     assert xs, "empty list has no smallest item"
     return min(xs)
 
+	
+	
 class CountingClicker:
     """A class can/should have a docstring, just like a function"""
 
@@ -520,7 +535,9 @@ def generate_range(n):
         yield i   # every call to yield produces a value of the generator
         i += 1
 
-for i in generate_range(10):
+
+		
+		for i in generate_range(10):
     print(f"i: {i}")
 
 def natural_numbers():
@@ -560,6 +577,8 @@ for name in names:
 for i, name in enumerate(names):
     print(f"name {i} is {name}")
 
+	
+	
 import random
 random.seed(10)  # this ensures we get the same results every time
 
@@ -591,6 +610,7 @@ winning_numbers = random.sample(lottery_numbers, 6)  # [16, 36, 10, 6, 25, 9]
 four_with_replacement = [random.choice(range(10)) for _ in range(4)]
 print(four_with_replacement)  # [9, 4, 4, 2]
 
+
 import re
 
 re_examples = [                        # all of these are true, because
@@ -602,6 +622,7 @@ re_examples = [                        # all of these are true, because
     ]
 
 assert all(re_examples), "all the regex examples should be True"
+
 
 list1 = ['a', 'b', 'c']
 list2 = [1, 2, 3]
@@ -625,6 +646,7 @@ try:
 except TypeError:
     print("add expects two inputs")
 add(*[1, 2])   # returns 3
+
 
 def doubler(f):
     # Here we define a new function that keeps a reference to f
@@ -676,6 +698,9 @@ def doubler_correct(f):
 
 g = doubler_correct(f2)
 assert g(1, 2) == 6, "doubler should work now"
+
+
+
 
 def add(a, b):
     return a + b

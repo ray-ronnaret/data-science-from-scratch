@@ -17,6 +17,7 @@ plt.ylabel("Billions of $")
 plt.savefig('im/viz_gdp.png')
 plt.gca().clear()
 
+
 movies = ["Annie Hall", "Ben-Hur", "Casablanca", "Gandhi", "West Side Story"]
 num_oscars = [5, 11, 3, 8, 10]
 
@@ -59,6 +60,7 @@ plt.title("Distribution of Exam 1 Grades")
 plt.savefig('im/viz_grades.png')
 plt.gca().clear()
 
+
 mentions = [500, 505]
 years = [2017, 2018]
 
@@ -80,6 +82,10 @@ plt.savefig('im/viz_misleading_y_axis.png')
 plt.gca().clear()
 
 
+
+
+
+
 plt.bar(years, mentions, 0.8)
 plt.xticks(years)
 plt.ylabel("# of times I heard someone say 'data science'")
@@ -92,6 +98,16 @@ plt.title("Not So Huge Anymore")
 
 plt.savefig('im/viz_non_misleading_y_axis.png')
 plt.gca().clear()
+
+
+
+
+
+
+
+
+
+
 
 variance     = [1, 2, 4, 8, 16, 32, 64, 128, 256]
 bias_squared = [256, 128, 64, 32, 16, 8, 4, 2, 1]
@@ -138,6 +154,10 @@ plt.ylabel("daily minutes spent on the site")
 plt.savefig('im/viz_scatterplot.png')
 plt.gca().clear()
 
+
+
+
+
 test_1_grades = [ 99, 90, 85, 97, 80]
 test_2_grades = [100, 85, 60, 90, 70]
 
@@ -150,6 +170,12 @@ plt.ylabel("test 2 grade")
 
 plt.savefig('im/viz_scatterplot_axes_not_comparable.png')
 plt.gca().clear()
+
+
+
+
+
+
 
 
 test_1_grades = [ 99, 90, 85, 97, 80]
